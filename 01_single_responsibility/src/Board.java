@@ -36,10 +36,19 @@ public class Board {
     }
 
     // Poor code — can you improve this?
+/*  --- my comments ---
+    Uncouple the responsibilities of this class by separating the
+    display functionality from the board functionality (i.e. construction of the board).
+    Create a new class Display which has the method display()
+    and takes a Board object as an argument.
+
+    --- comment out the original display method ---
     public void display() {
         String formattedFirstRow = this.spots.get(0) + " | " + this.spots.get(1) + " | " + this.spots.get(2) + "\n"
             + this.spots.get(3) + " | " + this.spots.get(4) + " | " + this.spots.get(5) + "\n"
             + this.spots.get(6) + " | " + this.spots.get(7) + " | " + this.spots.get(8);
         System.out.print(formattedFirstRow);
     }
+*/
 }
+

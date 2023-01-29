@@ -1,10 +1,10 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BoardTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -48,11 +48,26 @@ public class BoardTest {
         assertEquals(rowThree, board.thirdRow());
     }
 
+/*  --- my comments ---
+    I've commented out this test as it no longer works with the
+    original display() method in the Board class removed.
+
     @Test
     public void testPrintsBoardToConsole() {
         Board board = new Board();
         System.setOut(new PrintStream(outContent));
         board.display();
+        assertEquals("0 | 1 | 2\n3 | 4 | 5\n6 | 7 | 8", outContent.toString());
+    }
+*/
+
+    // New test for the Display class and display() method.
+    @Test
+    public void testNewPrintsBoardToConsole() {
+        Board board = new Board();
+        Display displayBoard = new Display();
+        System.setOut(new PrintStream(outContent));
+        displayBoard.display(board);
         assertEquals("0 | 1 | 2\n3 | 4 | 5\n6 | 7 | 8", outContent.toString());
     }
 }
