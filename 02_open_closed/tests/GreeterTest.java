@@ -30,6 +30,7 @@ public class GreeterTest {
         assertEquals("Hello darling!", greeter.greet());
     }
 
+    // --- new tests added ---
     @Test
     public void testGreetingDefault() {
         Greeter myGreeting = new Greeter();
