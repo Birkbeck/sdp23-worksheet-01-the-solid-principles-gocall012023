@@ -58,4 +58,12 @@ public class GreeterTest {
         myGreeting.setGreetType(new GreetIntimate());
         assertEquals("Hello darling.", myGreeting.greet());
     }
+
+    // test of new greeting
+    @Test
+    public void testGreetingFrench() {
+        Greeter myGreeting = new Greeter();
+        myGreeting.setGreetType(new GreetFrench());
+        assertEquals("Bonjour.", myGreeting.greet());
+    }
 }

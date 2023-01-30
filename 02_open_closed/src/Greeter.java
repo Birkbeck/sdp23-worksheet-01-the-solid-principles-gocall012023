@@ -56,6 +56,10 @@ public class Greeter {
 
         myGreeting.setGreetType(new GreetIntimate());
         System.out.println("The intimate greeting is: " + myGreeting.greet());
+
+        // adding a new greeting without modifying the existing code
+        myGreeting.setGreetType(new GreetFrench());
+        System.out.println("The French greeting is: " + myGreeting.greet());
     }
 
 }
