@@ -29,4 +29,32 @@ public class GreeterTest {
         greeter.setFormality("intimate");
         assertEquals("Hello darling!", greeter.greet());
     }
+
+    @Test
+    public void testGreetingDefault() {
+        Greeter myGreeting = new Greeter();
+        myGreeting.setGreetType(new GreetDefault());
+        assertEquals("Hello.", myGreeting.greet());
+    }
+
+    @Test
+    public void testGreetingFormal() {
+        Greeter myGreeting = new Greeter();
+        myGreeting.setGreetType(new GreetFormal());
+        assertEquals("Good evening.", myGreeting.greet());
+    }
+
+    @Test
+    public void testGreetingCasual() {
+        Greeter myGreeting = new Greeter();
+        myGreeting.setGreetType(new GreetCasual());
+        assertEquals("G'day.", myGreeting.greet());
+    }
+
+    @Test
+    public void testGreetingIntimate() {
+        Greeter myGreeting = new Greeter();
+        myGreeting.setGreetType(new GreetIntimate());
+        assertEquals("Hello darling.", myGreeting.greet());
+    }
 }
